@@ -3,14 +3,14 @@ package ru.job4j.puzzle;
 public class Win {
 
     public static boolean monoHorizontal(int[][] board, int row) {
-        boolean result = true;
+        boolean rsl = true;
         for (int i = 0; i < board[row].length; i++) {
             if (board[row][i] != 1) {
-                result = false;
+                rsl = false;
                 break;
             }
         }
-        return result;
+        return rsl;
     }
 
     public static boolean monoVertical(int[][] board, int column) {

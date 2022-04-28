@@ -2,7 +2,6 @@ package ru.job4j.puzzle;
 
 import org.junit.Test;
 
-import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 
@@ -16,7 +15,7 @@ public class WinTest {
                 {0, 0, 1, 0, 0},
                 {0, 0, 1, 0, 0},
         };
-        assertEquals(true, Win.check(board));
+        assertTrue(Win.check(board));
     }
 
     @Test
@@ -28,7 +27,7 @@ public class WinTest {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
         };
-        assertEquals(true, Win.check(board));
+        assertTrue(Win.check(board));
     }
 
     @Test
@@ -40,7 +39,7 @@ public class WinTest {
                 {0, 0, 0, 1, 0},
                 {0, 0, 0, 0, 0},
         };
-        assertEquals(false, Win.check(board));
+        assertFalse(Win.check(board));
     }
 
     @Test
@@ -52,6 +51,6 @@ public class WinTest {
                 {0, 0, 0, 1, 0},
                 {1, 1, 1, 1, 0},
         };
-        assertEquals(false, Win.check(board));
+        assertFalse(Win.check(board));
     }
 }
