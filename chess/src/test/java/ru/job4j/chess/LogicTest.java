@@ -17,7 +17,8 @@ public class LogicTest {
     }
 
     @Test(expected = OccupiedCellException.class)
-    public void testMoveOccupiedCellException() throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
+    public void testMoveOccupiedCellException()
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.C1));
         logic.add(new BishopBlack(Cell.H6));
@@ -26,18 +27,17 @@ public class LogicTest {
     }
 
     @Test(expected = FigureNotFoundException.class)
-    public void testMoveFigureNotFoundException() throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
+    public void testMoveFigureNotFoundException()
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         logic.move(Cell.C1, Cell.H6);
     }
 
     @Test(expected = ImpossibleMoveException.class)
-    public void testMoveImpossibleMoveException() throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
+    public void testMoveImpossibleMoveException()
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.C1));
         logic.move(Cell.C1, Cell.H1);
-
     }
-
-
 }

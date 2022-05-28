@@ -13,17 +13,19 @@ public enum Cell {
     private final int x;
     private final int y;
 
-    @Override
-    public String toString() {
-        return "Cell{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
-    }
-
     Cell(int cx, int cy) {
         x = cx;
         y = cy;
+    }
+
+    @Override
+    public String toString() {
+        return "Cell{"
+                + "x="
+                + x
+                + ", y="
+                + y
+                + '}';
     }
 
     public int getX() {
